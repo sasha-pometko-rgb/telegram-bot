@@ -14,7 +14,8 @@ import gspread
 from oauth2client.service_account import ServiceAccountCredentials
 
 # ================= НАСТРОЙКИ =================
-BOT_TOKEN = "8045149791:AAFExSDQAxWDb4vJ9Hdf4sEU2GW__uSMZSU"
+import os
+TOKEN = os.getenv("TOKEN")
 ADMIN_CHAT_ID = 469270967
 SPREADSHEET_NAME = "NailSibovatTable"
 CHECK_INTERVAL = 60  # для теста 1 мин, потом 3600 (час)
@@ -143,3 +144,4 @@ if __name__ == "__main__":
 
     # старт бота (Windows-friendly)
     app.run_polling()
+
